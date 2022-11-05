@@ -22,6 +22,17 @@
     padding: 15px;
     width: 100%;
 }
+.remove-alert{
+    visibility: hidden;
+    animation: 3s all;
+}
+
+.ralert{
+    visibility: visible;
+    animation: 10s all;
+    color: blue;
+}
+
 
 .counter{
     color: blue;

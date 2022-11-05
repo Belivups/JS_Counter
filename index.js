@@ -2,6 +2,7 @@
 let counter = document.getElementsByClassName('counter')[0]
 let btnDark = document.getElementsByClassName('btnDark')[0]
 let btnReset = document.getElementsByClassName('btnReset')[0]
+let getAlert = document.getElementsByClassName('getAlert')[0]
 let count = 0
 
 
@@ -28,8 +29,11 @@ function counterMinus() {
 function counterReset(){
     count = 0
     counter.innerHTML = count
+    getAlert.classList.add('ralert')
+    showAlert()
     checkbtn()
     checkReset()
+    
     
 }
 
@@ -47,6 +51,12 @@ function checkReset(){
     } else {
         btnReset.classList.remove("disabled")
     }
+}
+
+function showAlert(){
+    setTimeout(function (){
+        getAlert.classList.remove("ralert")
+    },1000)
 }
 
 checkbtn()
