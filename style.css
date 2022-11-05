@@ -1,0 +1,32 @@
+.container{
+    max-width: 600px;
+    background: #d4f9ff;
+    border-radius: 10px;
+    margin-top: 100px;
+    padding: 50px 50px 10px 50px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: auto;
+}
+.header h1{
+    font-weight: bold;
+}
+
+.btn{
+    border-radius: 3px;
+    border: none;
+}
+
+.btnAdd{
+    padding: 15px;
+    width: 100%;
+}
+
+.counter{
+    color: blue;
+    font-family: "JetBrains Mono";
+    font-size: 100px;
+    font-weight: bold;
+}
+
