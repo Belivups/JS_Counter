@@ -69,5 +69,3 @@ checkbtn()
 checkReset()
 
 
-
-// Counter App JS End
