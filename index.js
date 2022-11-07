@@ -68,3 +68,6 @@ function showAlert(){
 checkbtn()
 checkReset()
 
+
+
+// Counter App JS End
