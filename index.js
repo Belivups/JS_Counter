@@ -1,52 +1,58 @@
-
 let counter = document.getElementsByClassName('counter')[0]
 let btnDark = document.getElementsByClassName('btnDark')[0]
 let btnReset = document.getElementsByClassName('btnReset')[0]
 let getAlert = document.getElementsByClassName('getAlert')[0]
-let count = 0
+let getCount = 0
 
+getCount = localStorage.getItem('count')
+counter.innerHTML = getCount
 
 function counterPlus() {
-    if (count >= 0) {
-        count++
-        counter.innerHTML = count
+    if (getCount >= 0) {
+        getCount++
+        localStorage.setItem('count', getCount)
+        counter.innerHTML = getCount
         checkbtn()
         checkReset()
+        return getCount
     }
+    return getCount
 }
 
 function counterMinus() {
-    
-    if (count >= 1) {
-        count--
-        counter.innerHTML = count
+
+    if (getCount >= 1) {
+        getCount--
+        localStorage.setItem('count', getCount)
+        counter.innerHTML = getCount
         checkbtn()
         checkReset()
     }
 }
-        
+
 
 function counterReset(){
-    count = 0
-    counter.innerHTML = count
+    getCount = 0
+    localStorage.setItem('count', getCount)
+    counter.innerHTML = getCount
     getAlert.classList.add('ralert')
     showAlert()
     checkbtn()
     checkReset()
-    
-    
+
+
 }
 
 function checkbtn(){
-    if (count == 0) {
+    if (getCount == 0) {
         btnDark.classList.add("disabled")
     } else {
         btnDark.classList.remove("disabled")
     }
 }
- 
+
 function checkReset(){
-    if (count == 0) {
+    if (getCount == 0) {
         btnReset.classList.add("disabled")
     } else {
         btnReset.classList.remove("disabled")
@@ -61,3 +67,4 @@ function showAlert(){
 
 checkbtn()
 checkReset()
+
